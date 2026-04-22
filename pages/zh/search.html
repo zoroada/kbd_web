@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search - ZOROKB</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="../../index.html">ZOROKB</a>
+    <div class="nav-links">
+      <a href="../../index.html">Home</a>
+      <div class="nav-item">
+        <a class="nav-dropdown-toggle" href="../../keyboard/zh/keyboard.html">Keyboard</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">已交付</p>
+            <a href="../../keyboard/zh/tumblor40.html">Tumblor40</a>
+            <a href="../../keyboard/zh/orbit65.html">Orbit65</a>
+          </div>
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">正在开团</p>
+            <a href="../../keyboard/zh/aurora-alice-ec.html">Aurora Alice EC</a>
+            <a href="../../keyboard/zh/drift-pad.html">Drift Pad</a>
+          </div>
+        </div>
+      </div>
+      <a href="guide.html">Vial Guide</a>
+      <a href="docs.html">Manual</a>
+      <a href="features.html">Features</a>
+      <a class="firmware-link" href="firmware.html">Firmware</a>
+    </div>
+    <div class="nav-actions">
+      <form class="search-form" id="search-form" action="search.html" method="get" role="search">
+        <input type="search" name="q" id="search-input" placeholder="搜索文档…" aria-label="搜索">
+      </form>
+      <div class="nav-controls">
+        <a class="nav-control" data-lang-switch href="../en/search-en.html">EN</a>
+        <button class="nav-control" data-theme-toggle type="button">夜晚</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <h1>搜索</h1>
+  <div class="search-results" id="results"></div>
+</main>
+
+<footer>
+  © 2026 ZOROKB Documentation
+</footer>
+
+<script src="../../assets/data/search-index.js"></script>
+<script src="../../assets/scripts/search.js"></script>
+<script src="../../assets/scripts/index.js"></script>
+<script src="../../assets/scripts/search-page.js"></script>
+</body>
+</html>

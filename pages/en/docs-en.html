@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Manual - ZOROKB</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="../../index-en.html">ZOROKB</a>
+    <div class="nav-links">
+      <a href="../../index-en.html">Home</a>
+      <div class="nav-item">
+        <a class="nav-dropdown-toggle" href="../../keyboard/en/keyboard-en.html">Keyboard</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">Delivered</p>
+            <a href="../../keyboard/en/tumblor40-en.html">Tumblor40</a>
+            <a href="../../keyboard/en/orbit65-en.html">Orbit65</a>
+          </div>
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">Group Buy</p>
+            <a href="../../keyboard/en/aurora-alice-ec-en.html">Aurora Alice EC</a>
+            <a href="../../keyboard/en/drift-pad-en.html">Drift Pad</a>
+          </div>
+        </div>
+      </div>
+      <a href="guide-en.html">Vial Guide</a>
+      <a href="docs-en.html">Manual</a>
+      <a href="features-en.html">Features</a>
+      <a class="firmware-link" href="firmware-en.html">Firmware</a>
+    </div>
+    <div class="nav-actions">
+      <form id="search-form" class="search-form" action="search-en.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search docs..." aria-label="Search">
+      </form>
+      <div class="nav-controls">
+        <a class="nav-control" data-lang-switch href="../zh/docs.html">中文</a>
+        <button class="nav-control" data-theme-toggle type="button">Night</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container guide-main">
+  <div class="layout">
+    <aside class="sidebar" aria-label="Manual section navigation">
+      <p class="sidebar-title">Quick Navigation</p>
+      <ul>
+        <li><a href="#bluetooth">Bluetooth</a></li>
+        <li><a href="#wireless-24g">2.4G</a></li>
+        <li><a href="#lighting">Lighting</a></li>
+        <li><a href="#sleep-power">Sleep & Power</a></li>
+        <li><a href="#kbd-update">Keyboard Update</a></li>
+        <li><a href="#receiver-update">Receiver Update</a></li>
+        <li><a href="#mode-switch">Mode Switch</a></li>
+        <li><a href="#battery">Battery</a></li>
+        <li><a href="#reset">Reset</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </aside>
+
+    <div class="content">
+      <h1>User Manual</h1>
+
+      <h2 id="bluetooth">Bluetooth Connection (BLE_1 / BLE_2 / BLE_3)</h2>
+      <ol class="guide-steps">
+        <li>Open the <code>User</code> page and assign <code>BLE_1</code>, <code>BLE_2</code>, and <code>BLE_3</code> to keys.</li>
+        <li>Press the Bluetooth channel key you want to use.</li>
+        <li>Search for the keyboard in the Bluetooth settings of your computer, phone, or tablet.</li>
+        <li>Each of the three channels can be paired with one device. After pairing, press the corresponding channel key to switch.</li>
+      </ol>
+      <p class="guide-example">
+        Example: <code>BLE_1 = desktop</code>, <code>BLE_2 = phone</code>, <code>BLE_3 = tablet</code>.
+      </p>
+      <p class="guide-note">
+        To pair a new device, first remove the keyboard from the old device's Bluetooth list.
+      </p>
+
+      <h2 id="wireless-24g">2.4G Connection (24G_1 / 24G_2 / 24G_3)</h2>
+      <ol class="guide-steps">
+        <li>Assign <code>24G_1</code>, <code>24G_2</code>, and <code>24G_3</code> on the <code>User</code> page.</li>
+        <li>Plug in the receiver and press the corresponding 2.4G channel key on the keyboard.</li>
+        <li>The receiver channel is determined by <code>%3</code>: <code>0 / 1 / 2</code> correspond to <code>24G_1 / 24G_2 / 24G_3</code>.</li>
+      </ol>
+      <p class="guide-note">
+        The keyboard and receiver must be on the same 2.4G channel to work.
+      </p>
+
+      <h2 id="lighting">Lighting</h2>
+      <ol class="guide-steps">
+        <li>Place lighting-related keys on <code>layer1</code> for easier memorization and troubleshooting.</li>
+        <li>Start with power toggle and effect switching, then add brightness and speed controls.</li>
+        <li>Test the board after every small group of changes.</li>
+      </ol>
+      <p class="guide-note">
+        Actual lighting key names may vary by firmware build. Use the labels shown in your current Vial key list.
+      </p>
+
+      <h2 id="sleep-power">Sleep and Power Off (Wireless Mode)</h2>
+      <h3>Automatic / Manual Sleep</h3>
+      <ul class="guide-checklist">
+        <li>In wireless mode without a USB data cable, the board will automatically sleep after about <span class="guide-time">30 minutes</span> of inactivity.</li>
+        <li>You can assign <code>KB_SLP</code> to a key for manual sleep.</li>
+        <li>Press any key to wake the board.</li>
+      </ul>
+      <h3>Power Off and Power On</h3>
+      <ul class="guide-checklist">
+        <li>Assign <code>KB_OFF</code> to a key and press it to power off the keyboard.</li>
+        <li>Power-on method A: plug in USB with the battery connected.</li>
+        <li>Power-on method B: hold <code>Space + S</code> for about <span class="guide-time">5s</span>.</li>
+      </ul>
+
+      <h2 id="kbd-update">Keyboard Firmware Update</h2>
+      <h3>Three ways to enter USB drive mode</h3>
+      <ol class="guide-steps">
+        <li>Method 1: connect with Vial, then click <code>Reboot to Bootloader</code> on the <code>Security</code> page.</li>
+        <li>Method 2: assign <code>KB_DFU</code> to a key and press it.</li>
+        <li>Method 3: trigger the reset button or reset pads twice quickly within <span class="guide-time">0.5s</span>.</li>
+      </ol>
+      <h3>Flashing steps</h3>
+      <ol class="guide-steps">
+        <li>Once the board enters USB drive mode, drag the keyboard firmware <code>.uf2</code> file into the drive, commonly named <code>Zorokb_ada</code>.</li>
+        <li>Do not unplug the board or cut power during the update.</li>
+        <li>Wait for the drive to disappear automatically. The keyboard will reboot after a few seconds.</li>
+      </ol>
+      <p class="guide-note">
+        If you entered USB drive mode by mistake, single-click the reset button or short the reset pads once to exit.
+      </p>
+
+      <h2 id="receiver-update">Receiver Update</h2>
+      <h3>Enter USB drive mode</h3>
+      <ol class="guide-steps">
+        <li>Method 1: Vial can connect directly to the receiver. Use the same bootloader method as above.</li>
+        <li>Method 2: assign <code>KC_DFU</code> on the keyboard and press it to trigger the receiver bootloader.</li>
+      </ol>
+      <p class="guide-note">
+        When using <code>KC_DFU</code>, the keyboard must be in 2.4G mode and on the same channel as the receiver.
+      </p>
+      <h3>Flashing steps</h3>
+      <ol class="guide-steps">
+        <li>Drag the receiver <code>.uf2</code> file into the mounted USB drive.</li>
+        <li>Do not unplug the receiver or interrupt power during the update.</li>
+        <li>If the file copy shows an error, that is usually normal. Wait for the drive to disappear automatically.</li>
+        <li>About <span class="guide-time">3s</span> after the drive disappears, unplug and reconnect the receiver.</li>
+      </ol>
+
+      <h2 id="mode-switch">Mode Switch (U_O_W)</h2>
+      <ol class="guide-steps">
+        <li>Assign <code>U_O_W</code> to a key.</li>
+        <li>Press it to switch between wired USB and wireless mode.</li>
+        <li>Bluetooth and 2.4G cannot be active at the same time.</li>
+      </ol>
+      <p class="guide-note">
+        The keyboard remembers the last active mode and channel before shutdown. Sleep or power cycling restores that state.
+      </p>
+
+      <h2 id="battery">Battery Display</h2>
+      <ul class="guide-checklist">
+        <li>In Bluetooth mode, you can view battery percentage from the system Bluetooth device list.</li>
+        <li>In wired or 2.4G mode, assign <code>PRT_BAT</code> on the <code>User</code> page to check battery status.</li>
+        <li>After power-on, wait a few seconds for the battery value to stabilize.</li>
+      </ul>
+
+      <h2 id="reset">Reset Keyboard (KB_RST)</h2>
+      <ol class="guide-steps">
+        <li>Assign <code>KB_RST</code> on the <code>User</code> page.</li>
+        <li>Press it to clear the current configuration and reboot the keyboard.</li>
+      </ol>
+      <p class="guide-note">
+        Export a backup before resetting so the configuration can be restored later.
+      </p>
+
+      <h2 id="faq">FAQ</h2>
+      <ul class="guide-checklist">
+        <li>Bluetooth is visible but cannot connect: remove the keyboard from the old device and pair again.</li>
+        <li>No input in 2.4G mode: verify that the keyboard channel and receiver channel match.</li>
+        <li>Unexpected behavior after flashing: re-enter bootloader mode and drag in the correct <code>.uf2</code> again.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2026 ZOROKB Documentation
+</footer>
+
+<script src="../../assets/scripts/index.js"></script>
+</body>
+</html>

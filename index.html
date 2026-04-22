@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZKB 文档</title>
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+  <a class="logo" href="index.html">ZOROKB</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <div class="nav-item">
+      <a class="nav-dropdown-toggle" href="keyboard/zh/keyboard.html">Keyboard</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-group">
+          <p class="nav-dropdown-label">已交付</p>
+          <a href="keyboard/zh/tumblor40.html">Tumblor40</a>
+          <a href="keyboard/zh/orbit65.html">Orbit65</a>
+        </div>
+        <div class="nav-dropdown-group">
+          <p class="nav-dropdown-label">正在开团</p>
+          <a href="keyboard/zh/aurora-alice-ec.html">Aurora Alice EC</a>
+          <a href="keyboard/zh/drift-pad.html">Drift Pad</a>
+        </div>
+      </div>
+    </div>
+    <a href="pages/zh/guide.html">Vial Guide</a>
+    <a href="pages/zh/docs.html">Manual</a>
+    <a href="pages/zh/features.html">Features</a>
+    <a class="firmware-link" href="pages/zh/firmware.html">Firmware</a>
+  </div>
+  <div class="nav-actions">
+    <form id="search-form" class="search-form" action="pages/zh/search.html" method="get" role="search">
+      <input type="search" name="q" placeholder="搜索文档…" aria-label="搜索">
+    </form>
+    <div class="nav-controls">
+      <a class="nav-control" data-lang-switch href="index-en.html">EN</a>
+      <button class="nav-control" data-theme-toggle type="button">夜晚</button>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-shell">
+    <div class="hero-copy">
+      <span class="eyebrow">Wireless Keyboard Firmware</span>
+      <h1>ZOROKB 固件与文档中心</h1>
+      <p class="intro">
+        ZOROKB 是一个使用 C 编写的机械 / 静电容键盘固件，基于
+        <a href="https://www.nordicsemi.cn/products/nrf52833/" class="chip-link nrf52">nRF52833</a>
+        以及性能更强的
+        <a href="https://www.nordicsemi.cn/products/nrf54lm20a/" class="chip-link nrf54">nRF54LM20A</a>
+        驱动，提供低功耗、低延迟、Vial 可配置的键盘使用体验。
+      </p>
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <strong>多协议连接</strong>
+          <span>USB / BLE / 2.4G 一套固件统一管理</span>
+        </div>
+        <div class="highlight-item">
+          <strong>原生 Vial</strong>
+          <span>实时改键、分层、宏与进阶行为支持</span>
+        </div>
+        <div class="highlight-item">
+          <strong>面向量产</strong>
+          <span>适合日常使用、售后维护与固件分发</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="keyboard/zh/keyboard.html" class="hero-btn qq-btn">查看 Keyboard</a>
+        <a href="pages/zh/docs.html" class="hero-btn qq-btn">打开使用说明</a>
+        <a href="pages/zh/guide.html" class="hero-btn">查看 Vial 教程</a>
+        <a href="pages/zh/firmware.html" class="hero-btn qq-btn">下载固件</a>
+        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=YOUR_QQ_KEY" target="_blank" rel="noopener" class="hero-btn qq-btn">加入 QQ 交流</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<main class="container">
+  <section class="section-heading">
+    <h2>核心能力</h2>
+    <p>围绕连接稳定性、可配置性与交付效率构建的功能集。</p>
+  </section>
+
+  <section class="section-panel">
+    <div class="grid">
+      <div class="card">
+        <h3>MX / EC 双路线</h3>
+        <p>同时覆盖机械与静电容方案，固件能力可按硬件配置灵活适配。</p>
+      </div>
+      <div class="card">
+        <h3>原生 Vial</h3>
+        <p>实时修改键位、层、宏与高级行为，不需要重复刷写固件。</p>
+      </div>
+      <div class="card">
+        <h3>BLE 多设备</h3>
+        <p>蓝牙支持 3 台设备切换，适合桌面、平板和移动端混合使用。</p>
+      </div>
+      <div class="card">
+        <h3>2.4G 通道管理</h3>
+        <p>接收器通道与键盘通道联动，适合办公和游戏场景快速切换。</p>
+      </div>
+      <div class="card">
+        <h3>长续航设计</h3>
+        <p>1000mAh 电池下，无灯状态机械约 1000h、静电容约 400h。</p>
+      </div>
+      <div class="card">
+        <h3>拖拽升级</h3>
+        <p>通过 UF2 文件拖拽完成升级，降低售后与维护成本。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer>
+  © 2026 ZOROKB Documentation
+</footer>
+
+<script src="assets/scripts/index.js"></script>
+</body>
+</html>

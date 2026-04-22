@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search - ZOROKB</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="../../index-en.html">ZOROKB</a>
+    <div class="nav-links">
+      <a href="../../index-en.html">Home</a>
+      <div class="nav-item">
+        <a class="nav-dropdown-toggle" href="../../keyboard/en/keyboard-en.html">Keyboard</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">Delivered</p>
+            <a href="../../keyboard/en/tumblor40-en.html">Tumblor40</a>
+            <a href="../../keyboard/en/orbit65-en.html">Orbit65</a>
+          </div>
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">Group Buy</p>
+            <a href="../../keyboard/en/aurora-alice-ec-en.html">Aurora Alice EC</a>
+            <a href="../../keyboard/en/drift-pad-en.html">Drift Pad</a>
+          </div>
+        </div>
+      </div>
+      <a href="guide-en.html">Vial Guide</a>
+      <a href="docs-en.html">Manual</a>
+      <a href="features-en.html">Features</a>
+      <a class="firmware-link" href="firmware-en.html">Firmware</a>
+    </div>
+    <div class="nav-actions">
+      <form class="search-form" id="search-form" action="search-en.html" method="get" role="search">
+        <input type="search" name="q" id="search-input" placeholder="Search docs..." aria-label="Search">
+      </form>
+      <div class="nav-controls">
+        <a class="nav-control" data-lang-switch href="../zh/search.html">中文</a>
+        <button class="nav-control" data-theme-toggle type="button">Night</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <h1>Search</h1>
+  <div class="search-results" id="results"></div>
+</main>
+
+<footer>
+  © 2026 ZOROKB Documentation
+</footer>
+
+<script src="../../assets/data/search-index.js"></script>
+<script src="../../assets/scripts/search.js"></script>
+<script src="../../assets/scripts/index.js"></script>
+<script src="../../assets/scripts/search-page.js"></script>
+</body>
+</html>

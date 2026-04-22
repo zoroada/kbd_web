@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard - ZOROKB</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="../../index.html">ZOROKB</a>
+    <div class="nav-links">
+      <a href="../../index.html">Home</a>
+      <div class="nav-item">
+        <a class="nav-dropdown-toggle" href="keyboard.html">Keyboard</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">已交付</p>
+            <a href="tumblor40.html">Tumblor40</a>
+            <a href="orbit65.html">Orbit65</a>
+          </div>
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">正在开团</p>
+            <a href="aurora-alice-ec.html">Aurora Alice EC</a>
+            <a href="drift-pad.html">Drift Pad</a>
+          </div>
+        </div>
+      </div>
+      <a href="../../pages/zh/guide.html">Vial Guide</a>
+      <a href="../../pages/zh/docs.html">Manual</a>
+      <a href="../../pages/zh/features.html">Features</a>
+      <a href="../../pages/zh/firmware.html">Firmware</a>
+    </div>
+    <div class="nav-actions">
+      <form id="search-form" class="search-form" action="../../pages/zh/search.html" method="get" role="search">
+        <input type="search" name="q" placeholder="搜索文档…" aria-label="搜索">
+      </form>
+      <div class="nav-controls">
+        <a class="nav-control" data-lang-switch href="../en/keyboard-en.html">EN</a>
+        <button class="nav-control" data-theme-toggle type="button">夜晚</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="keyboard-shell">
+    <section class="keyboard-header">
+      <div class="keyboard-header-copy">
+        <h1>Keyboard</h1>
+        <p>这里统一整理已经交付和正在开团的键盘。每个型号都有独立页面，便于查看状态、说明入口和固件信息。</p>
+      </div>
+      <select class="keyboard-select" aria-label="选择键盘" onchange="if(this.value) location.href=this.value;">
+        <option value="keyboard.html">选择键盘型号</option>
+        <optgroup label="已交付">
+          <option value="tumblor40.html">Tumblor40</option>
+          <option value="orbit65.html">Orbit65</option>
+        </optgroup>
+        <optgroup label="正在开团">
+          <option value="aurora-alice-ec.html">Aurora Alice EC</option>
+          <option value="drift-pad.html">Drift Pad</option>
+        </optgroup>
+      </select>
+    </section>
+
+    <section class="keyboard-section">
+      <div class="keyboard-section-heading">
+        <h2>已交付键盘</h2>
+        <p>这些型号已经完成交付，可直接查看页面、使用说明与固件入口。</p>
+      </div>
+      <div class="keyboard-grid">
+        <article class="keyboard-card">
+          <div class="keyboard-card-top">
+            <h3>Tumblor40</h3>
+            <span class="status-pill">已交付</span>
+          </div>
+          <p>40% 紧凑布局，适合层功能密集型用户，已支持 Vial、BLE 和 2.4G。</p>
+          <div class="keyboard-meta">
+            <span>40%</span>
+            <span>BLE / 2.4G</span>
+            <span>Vial</span>
+          </div>
+          <div class="keyboard-card-actions">
+            <a class="keyboard-link primary" href="tumblor40.html">查看页面</a>
+            <a class="keyboard-link" href="../../pages/zh/docs.html">使用说明</a>
+          </div>
+        </article>
+        <article class="keyboard-card">
+          <div class="keyboard-card-top">
+            <h3>Orbit65</h3>
+            <span class="status-pill">已交付</span>
+          </div>
+          <p>65% 日用布局，偏向桌面办公与无线主力使用，支持多设备切换和静音方案。</p>
+          <div class="keyboard-meta">
+            <span>65%</span>
+            <span>多设备切换</span>
+            <span>MX / EC</span>
+          </div>
+          <div class="keyboard-card-actions">
+            <a class="keyboard-link primary" href="orbit65.html">查看页面</a>
+            <a class="keyboard-link" href="../../pages/zh/docs.html">使用说明</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="keyboard-section">
+      <div class="keyboard-section-heading">
+        <h2>正在开团</h2>
+        <p>这些型号当前处于募集或预热阶段，页面以展示定位、配列与后续支持计划为主。</p>
+      </div>
+      <div class="keyboard-grid">
+        <article class="keyboard-card">
+          <div class="keyboard-card-top">
+            <h3>Aurora Alice EC</h3>
+            <span class="status-pill group-buy">开团中</span>
+          </div>
+          <p>Alice 人体工学静电容方案，面向长时间输入与桌面生产力场景。</p>
+          <div class="keyboard-meta">
+            <span>Alice</span>
+            <span>EC</span>
+            <span>人体工学</span>
+          </div>
+          <div class="keyboard-card-actions">
+            <a class="keyboard-link primary" href="aurora-alice-ec.html">查看页面</a>
+            <a class="keyboard-link" href="../../pages/zh/guide.html">Vial 教程</a>
+          </div>
+        </article>
+        <article class="keyboard-card">
+          <div class="keyboard-card-top">
+            <h3>Drift Pad</h3>
+            <span class="status-pill group-buy">开团中</span>
+          </div>
+          <p>无线宏键盘 / 小键盘扩展方案，适合媒体控制、工作流快捷键和副键位扩展。</p>
+          <div class="keyboard-meta">
+            <span>Macro Pad</span>
+            <span>无线扩展</span>
+            <span>热插拔</span>
+          </div>
+          <div class="keyboard-card-actions">
+            <a class="keyboard-link primary" href="drift-pad.html">查看页面</a>
+            <a class="keyboard-link" href="../../pages/zh/features.html">功能概览</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>© 2026 ZOROKB Documentation</footer>
+<script src="../../assets/scripts/index.js"></script>
+</body>
+</html>

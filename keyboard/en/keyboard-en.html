@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard - ZOROKB</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="../../index-en.html">ZOROKB</a>
+    <div class="nav-links">
+      <a href="../../index-en.html">Home</a>
+      <div class="nav-item">
+        <a class="nav-dropdown-toggle" href="keyboard-en.html">Keyboard</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">Delivered</p>
+            <a href="tumblor40-en.html">Tumblor40</a>
+            <a href="orbit65-en.html">Orbit65</a>
+          </div>
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-label">Group Buy</p>
+            <a href="aurora-alice-ec-en.html">Aurora Alice EC</a>
+            <a href="drift-pad-en.html">Drift Pad</a>
+          </div>
+        </div>
+      </div>
+      <a href="../../pages/en/guide-en.html">Vial Guide</a>
+      <a href="../../pages/en/docs-en.html">Manual</a>
+      <a href="../../pages/en/features-en.html">Features</a>
+      <a href="../../pages/en/firmware-en.html">Firmware</a>
+    </div>
+    <div class="nav-actions">
+      <form id="search-form" class="search-form" action="../../pages/en/search-en.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search docs..." aria-label="Search">
+      </form>
+      <div class="nav-controls">
+        <a class="nav-control" data-lang-switch href="../zh/keyboard.html">中文</a>
+        <button class="nav-control" data-theme-toggle type="button">Night</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="keyboard-shell">
+    <section class="keyboard-header">
+      <div class="keyboard-header-copy">
+        <h1>Keyboard</h1>
+        <p>This page organizes delivered products and active group-buy models. Each keyboard has its own page for status, manual entry points, and firmware notes.</p>
+      </div>
+      <select class="keyboard-select" aria-label="Choose keyboard" onchange="if(this.value) location.href=this.value;">
+        <option value="keyboard-en.html">Choose a keyboard</option>
+        <optgroup label="Delivered">
+          <option value="tumblor40-en.html">Tumblor40</option>
+          <option value="orbit65-en.html">Orbit65</option>
+        </optgroup>
+        <optgroup label="Group Buy">
+          <option value="aurora-alice-ec-en.html">Aurora Alice EC</option>
+          <option value="drift-pad-en.html">Drift Pad</option>
+        </optgroup>
+      </select>
+    </section>
+
+    <section class="keyboard-section">
+      <div class="keyboard-section-heading">
+        <h2>Delivered</h2>
+        <p>These boards have already shipped and can link directly to manuals, firmware, and product status pages.</p>
+      </div>
+      <div class="keyboard-grid">
+        <article class="keyboard-card">
+          <div class="keyboard-card-top">
+            <h3>Tumblor40</h3>
+            <span class="status-pill">Delivered</span>
+          </div>
+          <p>A 40% compact layout for layer-heavy users, already supporting Vial, BLE, and 2.4G.</p>
+          <div class="keyboard-meta">
+            <span>40%</span>
+            <span>BLE / 2.4G</span>
+            <span>Vial</span>
+          </div>
+          <div class="keyboard-card-actions">
+            <a class="keyboard-link primary" href="tumblor40-en.html">View page</a>
+            <a class="keyboard-link" href="../../pages/en/docs-en.html">Manual</a>
+          </div>
+        </article>
+        <article class="keyboard-card">
+          <div class="keyboard-card-top">
+            <h3>Orbit65</h3>
+            <span class="status-pill">Delivered</span>
+          </div>
+          <p>A 65% daily-driver layout focused on desktop work, wireless stability, and quieter build options.</p>
+          <div class="keyboard-meta">
+            <span>65%</span>
+            <span>Multi-device</span>
+            <span>MX / EC</span>
+          </div>
+          <div class="keyboard-card-actions">
+            <a class="keyboard-link primary" href="orbit65-en.html">View page</a>
+            <a class="keyboard-link" href="../../pages/en/docs-en.html">Manual</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="keyboard-section">
+      <div class="keyboard-section-heading">
+        <h2>Group Buy</h2>
+        <p>These pages focus on layout direction, positioning, and planned support before delivery starts.</p>
+      </div>
+      <div class="keyboard-grid">
+        <article class="keyboard-card">
+          <div class="keyboard-card-top">
+            <h3>Aurora Alice EC</h3>
+            <span class="status-pill group-buy">Group Buy</span>
+          </div>
+          <p>An ergonomic Alice-style electrocapacitive project for long-form typing and productivity setups.</p>
+          <div class="keyboard-meta">
+            <span>Alice</span>
+            <span>EC</span>
+            <span>Ergonomic</span>
+          </div>
+          <div class="keyboard-card-actions">
+            <a class="keyboard-link primary" href="aurora-alice-ec-en.html">View page</a>
+            <a class="keyboard-link" href="../../pages/en/guide-en.html">Vial Guide</a>
+          </div>
+        </article>
+        <article class="keyboard-card">
+          <div class="keyboard-card-top">
+            <h3>Drift Pad</h3>
+            <span class="status-pill group-buy">Group Buy</span>
+          </div>
+          <p>A wireless macro pad / numpad expansion board for media control, workflows, and desk-side shortcuts.</p>
+          <div class="keyboard-meta">
+            <span>Macro Pad</span>
+            <span>Wireless</span>
+            <span>Hot-swap</span>
+          </div>
+          <div class="keyboard-card-actions">
+            <a class="keyboard-link primary" href="drift-pad-en.html">View page</a>
+            <a class="keyboard-link" href="../../pages/en/features-en.html">Features</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>© 2026 ZOROKB Documentation</footer>
+<script src="../../assets/scripts/index.js"></script>
+</body>
+</html>

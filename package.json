@@ -1,0 +1,8 @@
+{
+  "name": "zorokb-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build-index": "python3 scripts/build_index.py",
+    "build": "python3 scripts/build_index.py"
+  }
+}

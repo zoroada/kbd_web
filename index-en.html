@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZKB Docs</title>
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+  <a class="logo" href="index-en.html">ZOROKB</a>
+  <div class="nav-links">
+    <a href="index-en.html">Home</a>
+    <div class="nav-item">
+      <a class="nav-dropdown-toggle" href="keyboard/en/keyboard-en.html">Keyboard</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-group">
+          <p class="nav-dropdown-label">Delivered</p>
+          <a href="keyboard/en/tumblor40-en.html">Tumblor40</a>
+          <a href="keyboard/en/orbit65-en.html">Orbit65</a>
+        </div>
+        <div class="nav-dropdown-group">
+          <p class="nav-dropdown-label">Group Buy</p>
+          <a href="keyboard/en/aurora-alice-ec-en.html">Aurora Alice EC</a>
+          <a href="keyboard/en/drift-pad-en.html">Drift Pad</a>
+        </div>
+      </div>
+    </div>
+    <a href="pages/en/guide-en.html">Vial Guide</a>
+    <a href="pages/en/docs-en.html">Manual</a>
+    <a href="pages/en/features-en.html">Features</a>
+    <a class="firmware-link" href="pages/en/firmware-en.html">Firmware</a>
+  </div>
+  <div class="nav-actions">
+    <form id="search-form" class="search-form" action="pages/en/search-en.html" method="get" role="search">
+      <input type="search" name="q" placeholder="Search docs..." aria-label="Search">
+    </form>
+    <div class="nav-controls">
+      <a class="nav-control" data-lang-switch href="index.html">中文</a>
+      <button class="nav-control" data-theme-toggle type="button">Night</button>
+    </div>
+  </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-shell">
+    <div class="hero-copy">
+      <span class="eyebrow">Wireless Keyboard Firmware</span>
+      <h1>ZOROKB Firmware and Documentation Hub</h1>
+      <p class="intro">
+        ZOROKB is a keyboard firmware written in C for mechanical and electrocapacitive boards, powered by
+        <a href="https://www.nordicsemi.cn/products/nrf52833/" class="chip-link nrf52">nRF52833</a>
+        and the more capable
+        <a href="https://www.nordicsemi.cn/products/nrf54lm20a/" class="chip-link nrf54">nRF54LM20A</a>.
+        It delivers low-power, low-latency, Vial-configurable keyboard experiences.
+      </p>
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <strong>Multi-protocol</strong>
+          <span>USB, BLE, and 2.4G managed in one firmware stack</span>
+        </div>
+        <div class="highlight-item">
+          <strong>Native Vial</strong>
+          <span>Real-time remapping, layers, macros, and advanced actions</span>
+        </div>
+        <div class="highlight-item">
+          <strong>Production-ready</strong>
+          <span>Suitable for daily use, after-sales support, and firmware delivery</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="keyboard/en/keyboard-en.html" class="hero-btn qq-btn">Open Keyboard</a>
+        <a href="pages/en/docs-en.html" class="hero-btn qq-btn">Open Manual</a>
+        <a href="pages/en/guide-en.html" class="hero-btn">Open the Vial guide</a>
+        <a href="pages/en/firmware-en.html" class="hero-btn qq-btn">Download firmware</a>
+        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=YOUR_QQ_KEY" target="_blank" rel="noopener" class="hero-btn qq-btn">Join the QQ group</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<main class="container">
+  <section class="section-heading">
+    <h2>Core capabilities</h2>
+    <p>Built around reliable connectivity, flexible configuration, and easier product delivery.</p>
+  </section>
+
+  <section class="section-panel">
+    <div class="grid">
+      <div class="card">
+        <h3>MX / EC support</h3>
+        <p>Supports both mechanical and electrocapacitive product lines with hardware-aware firmware behavior.</p>
+      </div>
+      <div class="card">
+        <h3>Native Vial</h3>
+        <p>Edit keys, layers, macros, and advanced actions in real time without reflashing.</p>
+      </div>
+      <div class="card">
+        <h3>BLE multi-device</h3>
+        <p>Switch among three Bluetooth devices for desktop, tablet, and mobile workflows.</p>
+      </div>
+      <div class="card">
+        <h3>2.4G channel routing</h3>
+        <p>Keep receiver channels and keyboard channels in sync for office and gaming scenarios.</p>
+      </div>
+      <div class="card">
+        <h3>Long battery life</h3>
+        <p>With a 1000mAh battery and lighting off, mechanical boards can reach around 1000h, EC boards about 400h.</p>
+      </div>
+      <div class="card">
+        <h3>Simple updates</h3>
+        <p>Flash new UF2 builds through drag and drop to reduce maintenance overhead.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer>
+  © 2026 ZOROKB Documentation
+</footer>
+
+<script src="assets/scripts/index.js"></script>
+</body>
+</html>

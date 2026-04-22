@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vial 改键教程 - ZOROKB</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="../../index.html">ZOROKB</a>
+      <div class="nav-links">
+        <a href="../../index.html">Home</a>
+        <div class="nav-item">
+          <a class="nav-dropdown-toggle" href="../../keyboard/zh/keyboard.html">Keyboard</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-group">
+              <p class="nav-dropdown-label">已交付</p>
+              <a href="../../keyboard/zh/tumblor40.html">Tumblor40</a>
+              <a href="../../keyboard/zh/orbit65.html">Orbit65</a>
+            </div>
+            <div class="nav-dropdown-group">
+              <p class="nav-dropdown-label">正在开团</p>
+              <a href="../../keyboard/zh/aurora-alice-ec.html">Aurora Alice EC</a>
+              <a href="../../keyboard/zh/drift-pad.html">Drift Pad</a>
+            </div>
+          </div>
+        </div>
+        <a href="guide.html">Vial Guide</a>
+        <a href="docs.html">Manual</a>
+        <a href="features.html">Features</a>
+        <a class="firmware-link" href="firmware.html">Firmware</a>
+      </div>
+      <div class="nav-actions">
+        <form id="search-form" class="search-form" action="search.html" method="get" role="search">
+          <input type="search" name="q" placeholder="搜索文档…" aria-label="搜索">
+        </form>
+        <div class="nav-controls">
+          <a class="nav-control" data-lang-switch href="../en/guide-en.html">EN</a>
+          <button class="nav-control" data-theme-toggle type="button">夜晚</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container guide-main">
+    <div class="layout">
+      <aside class="sidebar" aria-label="Vial 教程章节导航">
+        <p class="sidebar-title">快速导航</p>
+        <ul>
+          <li><a href="#prepare">准备工作</a></li>
+          <li><a href="#identify">识别键盘</a></li>
+          <li><a href="#install">安装 Vial</a></li>
+          <li><a href="#open">打开 Vial</a></li>
+          <li><a href="#keys">修改按键</a></li>
+          <li><a href="#layout">修改布局</a></li>
+          <li><a href="#layer-keys">Layers 按键说明</a></li>
+          <li><a href="#mod-keys">修饰键按键说明</a></li>
+          <li><a href="#macro">设置宏</a></li>
+          <li><a href="#tap-dance">设置 Tap Dance</a></li>
+          <li><a href="#combo">设置 Combo</a></li>
+          <li><a href="#key-over">设置 Key Override</a></li>
+          <li><a href="#alt-repeat">设置 Alt Repeat</a></li>
+          <li><a href="#settings">设置 Settings</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <h1>Vial 改键教程</h1>
+        <p class="guide-lead">
+          这份教程面向日常使用，按顺序完成后你就能掌握 Vial 的核心改键流程：普通改键、宏、Tap Dance、Combo、Key Override、Alt Repeat。
+        </p>
+
+        <h2 id="prepare">准备工作</h2>
+        <ol class="guide-steps">
+          <li>准备一根可传输数据的 Type-C 线（仅充电线可能无法识别）。</li>
+          <li>建议先导出当前配置做备份，避免误操作后找不回原设置。</li>
+          <li>确认键盘固件已启用 Vial 功能并且可以正常连接。</li>
+        </ol>
+        <p class="guide-note">
+          提示：如果你在 Vial 中看不到某些标签页（例如 Combo/Tap Dance），通常是固件未启用对应功能，而不是软件故障。
+        </p>
+
+        <h2 id="identify">识别键盘</h2>
+        <p>
+          使用 Type-C 数据线连接键盘，设备管理器里面能看到对应键盘设备。
+        </p>
+        <p class="guide-example">
+          示例：连接后在设备管理器中看到 <code>ZOROKB Keyboard</code>（名称可能略有不同），说明系统已识别硬件。
+        </p>
+
+        <h2 id="install">安装 Vial</h2>
+        <p class="vial-install">
+          <a href="https://get.vial.today/download/" target="_blank" class="btn btn-primary">
+            下载 Vial
+          </a>
+          <span>
+            或者使用
+            <a href="https://vial.rocks/" target="_blank" class="vial-link">
+              Vial 网页版
+            </a>
+            进行连接
+          </span>
+        </p>
+        <p class="guide-example">
+          示例：在公司电脑无安装权限时，直接使用 <code>Vial 网页版</code> 完成连接与改键。
+        </p>
+
+        <h2 id="open">打开 Vial</h2>
+        <ol class="guide-steps">
+          <li>打开 Vial 后，左上角能看到你的键盘名称，说明连接成功。</li>
+          <li>先确认可以在 Keymap 页点击按键并选中目标按键位。</li>
+          <li>点击顶部 <code>File</code> 菜单，选择 <code>Load saved layout...</code> 导入配置数据。</li>
+          <li>选择其他用户导出的布局文件后确认导入，键盘会加载对应按键布局。</li>
+          <li>如果对方给的是 JSON 文件，可使用 <code>Sideload VIA JSON...</code> 导入。</li>
+          <li>导入完成后测试常用键位、切层键和连接模式键，确认与你的键盘功能一致。</li>
+        </ol>
+        <p class="guide-example">
+          示例：页面左上角显示 <code>zorokb Tumblor40</code> 后，通过 <code>File -> Load saved layout...</code> 导入好友布局，再做少量个性化调整。
+        </p>
+
+        <h2 id="keys">修改按键</h2>
+        <ol class="guide-steps">
+          <li>进入 <code>Keymap</code> 页面，点击你要修改的键位。</li>
+          <li>在下方功能区选择目标键值（如字母、功能键、媒体键等）。</li>
+          <li>修改后立即生效，按下实体键即可验证是否正确。</li>
+        </ol>
+        <p class="guide-example">
+          示例：把 <code>Caps Lock</code> 改成 <code>Esc</code>，保存后按原 Caps 键会输出 Esc。
+        </p>
+
+        <h2 id="layout">修改布局</h2>
+        <ol class="guide-steps">
+          <li>进入 <code>Layout</code> 页面，根据键盘实际配列开启/关闭对应选项。</li>
+          <li>完成后回到 <code>Keymap</code> 检查键位图是否与实物布局一致。</li>
+          <li>如果布局变化较大，建议重新检查每一层的关键按键位置。</li>
+        </ol>
+        <p class="guide-example">
+          示例：你实际使用分裂空格，就在 <code>Layout</code> 中启用 split space，再回到 Keymap 给左右空格分别分配不同功能。
+        </p>
+
+        <h2 id="layer-keys">Layers 页面按键说明</h2>
+        <p class="guide-note">
+          <code>n</code> 表示层号（0~11），例如 <code>MO(1)</code> 就是操作第 1 层。
+        </p>
+        <ul class="guide-checklist settings-list">
+          <li>
+            <code>Fn1(Fn3) / Fn2(Fn3)</code>
+            <p class="settings-desc">兼容旧式 Fn 动作入口，具体行为由固件里对应函数动作决定。</p>
+            <p class="settings-case">示例：固件把 <code>Fn3</code> 定义成切层时，按该键会执行对应 Fn 层动作。</p>
+          </li>
+          <li>
+            <code>MO(n)</code>
+            <p class="settings-desc">按住临时进入第 <code>n</code> 层，松开立刻返回。</p>
+            <p class="settings-case">示例：<code>MO(1)</code> 常用作 Fn 键。</p>
+          </li>
+          <li>
+            <code>DF(n) / PDF(n)</code>
+            <p class="settings-desc"><code>DF(n)</code> 设置默认层；<code>PDF(n)</code> 为可持久化默认层（重启后仍保留）。</p>
+            <p class="settings-case">示例：把 <code>PDF(1)</code> 设到某键，按一次后默认层长期切到 Layer 1。</p>
+          </li>
+          <li>
+            <code>TG(n)</code>
+            <p class="settings-desc">切换第 <code>n</code> 层开/关，按一次开，再按一次关。</p>
+            <p class="settings-case">示例：<code>TG(2)</code> 适合临时开启数字层。</p>
+          </li>
+          <li>
+            <code>TT(n)</code>
+            <p class="settings-desc">短按多次可切换层，长按则临时进层（兼具 Tap Toggle 与 MO 逻辑）。</p>
+            <p class="settings-case">示例：长按 <code>TT(1)</code> 当 Fn；快速连按达到阈值可锁定 Layer 1。</p>
+          </li>
+          <li>
+            <code>OSL(n)</code>
+            <p class="settings-desc">单次切层：按下后只对“下一次按键”生效一次。</p>
+            <p class="settings-case">示例：<code>OSL(1)</code> 后再按一个符号键，执行完自动回主层。</p>
+          </li>
+          <li>
+            <code>TO(n)</code>
+            <p class="settings-desc">直接跳转到第 <code>n</code> 层并退出其它临时层状态。</p>
+            <p class="settings-case">示例：设置 <code>TO(0)</code> 作为“一键回主层”。</p>
+          </li>
+          <li>
+            <code>LT n (kc)</code>
+            <p class="settings-desc">双功能键：短按输出 <code>kc</code>，长按进入第 <code>n</code> 层。</p>
+            <p class="settings-case">示例：<code>LT 1 (Space)</code>，点按是空格，长按进 Layer 1。</p>
+          </li>
+        </ul>
+        <p class="guide-example">
+          推荐新手先用 <code>MO(n)</code> + <code>TO(0)</code> 跑通流程，再升级到 <code>LT n (kc)</code> 做键位压缩。
+        </p>
+
+        <h2 id="mod-keys">修饰键页面按键说明</h2>
+        <p class="guide-note">
+          常见缩写：<code>C=Ctrl</code>、<code>S=Shift</code>、<code>A=Alt</code>、<code>G=GUI(Win/Command)</code>。
+        </p>
+        <ul class="guide-checklist settings-list">
+          <li>
+            <code>OSM ...</code>
+            <p class="settings-desc">One Shot Mod，一次性修饰键。按一次后，只作用于下一次按键。</p>
+            <p class="settings-case">示例：<code>OSM LSft</code> 后再按 <code>a</code>，只这一次输出大写 <code>A</code>。</p>
+          </li>
+          <li>
+            <code>LSft(kc) / LCtl(kc) / LAlt(kc) / LGui(kc)</code>
+            <p class="settings-desc">发送“修饰键 + kc”的组合输出。</p>
+            <p class="settings-case">示例：<code>LCtl(kc)</code> + <code>C</code> 可做成一键 <code>Ctrl+C</code>。</p>
+          </li>
+          <li>
+            <code>LCS(kc) / LCA(kc) / LCG(kc) / RCG(kc) / LSA(kc) / LSG(kc) / LCAG(kc)</code>
+            <p class="settings-desc">多修饰组合版本，按下即发送“多修饰 + kc”。</p>
+            <p class="settings-case">示例：<code>LCS(kc)</code> + <code>Z</code> 可快速触发 <code>Ctrl+Shift+Z</code>。</p>
+          </li>
+          <li>
+            <code>Meh(kc) / Hyper(kc)</code>
+            <p class="settings-desc"><code>Meh</code> 通常为 Ctrl+Shift+Alt；<code>Hyper</code> 通常为 Ctrl+Shift+Alt+GUI。</p>
+            <p class="settings-case">示例：给自动化软件设置 <code>Hyper+J</code> 作为全局快捷键，和常规快捷键冲突更少。</p>
+          </li>
+          <li>
+            <code>LSft_T(kc) / LCtl_T(kc) / ... / RGui_T(kc)</code>
+            <p class="settings-desc">Mod-Tap：短按输出 <code>kc</code>，长按当修饰键使用。</p>
+            <p class="settings-case">示例：<code>LCtl_T(Esc)</code>，点按是 Esc，长按是 Ctrl。</p>
+          </li>
+          <li>
+            <code>LCS_T(kc) / LCA_T(kc) / ... / LCAG_T(kc) / RCAG_T(kc) / Meh_T(kc) / ALL_T(kc)</code>
+            <p class="settings-desc">组合修饰的 Mod-Tap 版本：短按是 <code>kc</code>，长按是对应组合修饰。</p>
+            <p class="settings-case">示例：<code>Meh_T(Tab)</code>，点按 Tab，长按当 Meh 修饰键。</p>
+          </li>
+        </ul>
+        <p class="guide-example">
+          实战建议：日常输入优先从 <code>OSM</code> 和单修饰 <code>_T(kc)</code> 开始，确认不误触后再上组合修饰 <code>LCAG_T/Meh_T/ALL_T</code>。
+        </p>
+
+        <h2 id="macro">设置宏</h2>
+        <ol class="guide-steps">
+          <li>进入 <code>Macros</code> 页面，选择宏槽 <code>M0*</code>。</li>
+          <li>右下角Add action按钮顺序添加动作：<code>Text</code>、<code>Down</code>、<code>Up</code>、<code>Delay (ms)</code>、<code>Tap</code>。</li>
+          <li>把 <code>Text</code> 内容填写为 <code>zorokb</code>。</li>
+          <li>把 <code>Down</code> 设为 <code>A</code>，把 <code>Up</code> 也设为 <code>A</code>。</li>
+          <li>把 <code>Delay (ms)</code> 设为 <code>200</code>。</li>
+          <li>把 <code>Tap</code> 设为 <code>B</code>。</li>
+          <li>回到 <code>Keymap</code>，将某个按键绑定为 <code>M0</code> 后测试输出。</li>
+        </ol>
+        <pre><code>M0 动作顺序
+1) Text "zorokb"
+2) Down A
+3) Up A
+4) Delay 200ms
+5) Tap B</code></pre>
+        <p class="guide-example">
+          输出案例：<code>zorokbAB</code>，其中 <code>A</code> 与 <code>B</code> 之间有约 <span class="guide-time">200ms</span> 延迟。
+        </p>
+        <p class="guide-note">
+          建议：宏里尽量避免过长延时；涉及密码、令牌等敏感信息不要写进宏。
+        </p>
+
+        <h2 id="tap-dance">设置 Tap Dance</h2>
+        <ol class="guide-steps">
+          <li>进入 <code>Tap Dance</code> 页面，选择槽位 <code>0*</code>（即 <code>TD(0)</code>）。</li>
+          <li>按图设置 4 个动作：<code>On tap = A</code>、<code>On hold = B</code>、<code>On double tap = C</code>、<code>On tap + hold = D</code>。</li>
+          <li>把 <code>Tapping term (ms)</code> 设为 <span class="guide-time">200ms</span>。</li>
+          <li>点击 <code>Save</code> 保存。</li>
+          <li>回到 <code>Keymap</code>，把目标按键设置为 <code>TD(0)</code> 并测试。</li>
+        </ol>
+        <pre><code>TD(0) 参数
+On tap        -> A
+On hold       -> B
+On double tap -> C
+On tap + hold -> D
+Tapping term  -> 200ms</code></pre>
+        <p class="guide-example">
+          输出案例：单击触发 <code>A</code>，按住触发 <code>B</code>，双击触发 <code>C</code>，点按后继续按住触发 <code>D</code>。识别窗口为约 <span class="guide-time">200ms</span>。
+        </p>
+
+        <h2 id="combo">设置 Combo</h2>
+        <ol class="guide-steps">
+          <li>进入 <code>Combos</code> 页面，选择一个组合槽位。</li>
+          <li>设置 <code>Key 1 = Q</code>、<code>Key 2 = W</code>、<code>Key 3 = E</code>，<code>Key 4</code> 保持空白。</li>
+          <li>设置 <code>Output key = R</code>。</li>
+          <li>在键盘上几乎同时按下 <code>Key 1</code>、<code>Key 2</code>、<code>Key 3</code> 进行测试。</li>
+        </ol>
+        <pre><code>Combo 参数
+Key 1      -> Q
+Key 2      -> W
+Key 3      -> E
+Key 4      -> (空)
+Output key -> R</code></pre>
+        <p class="guide-example">
+          输出案例（按图中配置）：同时按下 <code>Q</code> + <code>W</code> + <code>E</code> 触发组合输出 <code>R</code>；若不是同时按下（间隔时间大于 <span class="guide-time">50ms</span>），则通常按各自原键输出。
+        </p>
+        <p class="guide-note">
+          建议：先用两键 Combo 验证逻辑，再逐步增加更复杂组合，能更快排查误触问题。
+        </p>
+
+        <h2 id="key-over">设置 Key Overrides</h2>
+        <p class="guide-note">
+          Key Override 的核心作用：当“触发键 + 指定修饰键”满足条件时，把原本要输出的键替换成另一个键。
+        </p>
+        <ul class="guide-checklist settings-list">
+          <li><code>Enable</code><p class="settings-desc">当前这条规则的总开关。关闭后该规则完全不生效。</p></li>
+          <li><code>Enable on layers</code><p class="settings-desc">这条规则在哪些层生效。勾选 0~15 中的层号；只在被勾选的层触发。<code>Enable all</code>/<code>Disable all</code> 用于一键全选/全不选。</p></li>
+          <li><code>Trigger</code><p class="settings-desc">触发键本体（图中是 <code>A</code>）。只有按下这个键才会评估规则。</p></li>
+          <li><code>Trigger mods</code><p class="settings-desc">必要修饰键。这里勾选的修饰键必须被按住，规则才触发（图中勾选了 <code>LShift</code>）。</p></li>
+          <li><code>Negative mods</code><p class="settings-desc">禁止修饰键。这里勾选的修饰键一旦被按住，就不允许触发这条规则。</p></li>
+          <li><code>Suppressed mods</code><p class="settings-desc">触发后要“抑制”的修饰键。用于避免修饰键继续影响最终输出。</p></li>
+          <li><code>Replacement</code><p class="settings-desc">替换输出键（图中是 <code>B</code>）。满足条件时，输出它而不是 Trigger 键原本的输出。</p></li>
+          <li><code>Options</code><p class="settings-desc">规则激活/失活时机的细节开关。用于控制按下、释放、连按时的边界行为。</p></li>
+        </ul>
+        <pre><code>图中案例（建议先照着验证）
+Enable        -> 开
+Layer         -> 勾选目标层（示例常用 Layer 0）
+Trigger       -> A
+Trigger mods  -> LShift
+Negative mods -> (空)
+Suppressed mods -> (空)
+Replacement   -> B
+Options       -> 可见前3项已勾选（其余保持默认）</code></pre>
+        <p class="guide-example">
+          输出案例（按图中思路）：按住 <code>LShift</code> 再按 <code>A</code> 时，输出会被改写为 <code>B</code>。如果没按住 <code>LShift</code>，则按键按原逻辑输出。
+        </p>
+        <div class="guide-note options-note">
+          <p>Options 每一项含义：</p>
+          <p class="option-item"><code>Activate when the trigger key is pressed down</code><span>按下触发键时就尝试激活。</span></p>
+          <p class="option-item"><code>Activate when a necessary modifier is pressed down</code><span>按下必要修饰键时可立即进入可触发状态。</span></p>
+          <p class="option-item"><code>Activate when a negative modifier is released</code><span>负向修饰键释放后可重新满足触发条件。</span></p>
+          <p class="option-item"><code>Activate on one modifier</code><span>只要命中一个修饰键条件即可触发（不常用，建议谨慎开启）。</span></p>
+          <p class="option-item"><code>Don't deactivate when another key is pressed down</code><span>按其他键时不立刻失活，适合连续组合输入。</span></p>
+          <p class="option-item"><code>Don't register the trigger key again after the override is deactivated</code><span>规则结束后不再补发 Trigger 键原始按键，避免多余字符。</span></p>
+        </div>
+
+        <h2 id="alt-repeat">设置 Alt Repeat Key</h2>
+        <p class="guide-note">
+          Alt Repeat Key 用于“基于上一次按键输出替代键”。常见用法是：最近按了某个键后，再按 Alt Repeat 键输出你定义的替代键。
+        </p>
+        <ul class="guide-checklist settings-list">
+          <li><code>Enable</code><p class="settings-desc">当前这条 Alt 规则开关。关闭后这条映射不参与计算。</p></li>
+          <li><code>Last key</code><p class="settings-desc">最近一次按下的目标键（图中是 <code>A</code>）。</p></li>
+          <li><code>Alt key</code><p class="settings-desc">替代输出键（图中是 <code>B</code>）。当 Last key 条件命中时，Alt Repeat 键会输出它。</p></li>
+          <li><code>Allowed mods</code><p class="settings-desc">允许继承的修饰键。图中勾选了 <code>LShift</code>，表示在该修饰键状态下也允许这条映射生效。</p></li>
+          <li><code>Options</code><p class="settings-desc">行为细节开关，决定默认回退、双向映射、左右手修饰键匹配方式。</p></li>
+        </ul>
+        <pre><code>图中案例（建议先照着验证）
+Enable       -> 开
+Last key     -> A
+Alt key      -> B
+Allowed mods -> LShift
+Options      -> 默认未勾选（按图）</code></pre>
+        <p class="guide-example">
+          输出案例（按图中思路）：最近一次主键是 <code>A</code> 时，按下 Alt Repeat 键将输出 <code>B</code>；如果当前修饰键条件不在允许范围内，则按默认逻辑处理。
+        </p>
+        <div class="guide-note options-note">
+          <p>Options 每一项含义：</p>
+          <p class="option-item"><code>Default to this alt key</code><span>当没有匹配到 Last key 映射时，默认也输出当前 Alt key。</span></p>
+          <p class="option-item"><code>Bidirectional</code><span>启用双向映射（例如 A→B 同时允许 B→A 的反向关系，具体表现以固件实现为准）。</span></p>
+          <p class="option-item"><code>Ignore mod handedness</code><span>忽略修饰键左右手差异（例如把 LShift / RShift 视为同类匹配）。</span></p>
+        </div>
+
+        <h2 id="settings">设置 Settings</h2>
+        <p class="guide-note">
+          本节按你截图中的 <code>QMK Settings</code> 页面逐行解释，每个参数后都带一个可直接照抄的案例。最后统一点 <code>Save</code> 保存；要撤销当前未保存改动，点 <code>Reset</code>。
+        </p>
+
+        <h3>1. 按键交换与基础行为</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Swap Caps Lock and Left Control</code><p class="settings-desc">交换 <code>Caps Lock</code> 和左 <code>Ctrl</code> 的功能。</p><p class="settings-case">案例：开启后原本 <code>Caps</code> 位置变成左 <code>Ctrl</code>，更适合终端快捷键。</p></li>
+          <li><code>Treat Caps Lock as Control</code><p class="settings-desc">把 <code>Caps Lock</code> 当成 <code>Ctrl</code>，但不和左 Ctrl 互换。</p><p class="settings-case">案例：你几乎不用大写锁定，开启后可用 Caps 位做 <code>Ctrl + C</code>。</p></li>
+          <li><code>Swap Left Alt and GUI</code><p class="settings-desc">交换左 <code>Alt</code> 与左 <code>GUI/Win/Command</code>。</p><p class="settings-case">案例：Mac 用户想要左下角更接近 Command 手感时可开启。</p></li>
+          <li><code>Swap Right Alt and GUI</code><p class="settings-desc">交换右 <code>Alt</code> 与右 <code>GUI</code>。</p><p class="settings-case">案例：你在右手区常用系统快捷键，开启后可把右 GUI 放到更顺手位置。</p></li>
+          <li><code>Disable the GUI keys</code><p class="settings-desc">禁用所有 GUI 键。</p><p class="settings-case">案例：游戏时避免误触 Win 键弹出系统菜单，可临时开启。</p></li>
+          <li><code>Swap ` and Escape</code><p class="settings-desc">交换 <code>`</code> 与 <code>Esc</code>。</p><p class="settings-case">案例：Vim 用户把更易按的位置给 <code>Esc</code>，减少误按。</p></li>
+          <li><code>Swap \\ and Backspace</code><p class="settings-desc">交换 <code>\\</code> 与 <code>Backspace</code>。</p><p class="settings-case">案例：40/60 配列里想让退格更近，开启后原反斜杠位可直接退格。</p></li>
+          <li><code>Enable N-key rollover</code><p class="settings-desc">开启全键无冲（NKRO）。</p><p class="settings-case">案例：需要同时按很多键（游戏或和弦输入）时，开启可减少按键冲突。</p></li>
+          <li><code>Swap Left Control and GUI</code><p class="settings-desc">交换左 <code>Ctrl</code> 与左 <code>GUI</code>。</p><p class="settings-case">案例：Windows 键位迁移到 Mac 习惯时常用。</p></li>
+          <li><code>Swap Right Control and GUI</code><p class="settings-desc">交换右 <code>Ctrl</code> 与右 <code>GUI</code>。</p><p class="settings-case">案例：右手区常用快捷键时，把右 GUI 调整到右 Ctrl 原位置。</p></li>
+        </ul>
+
+        <h3>2. Esc 发送策略</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Always send Escape if Alt is pressed</code><p class="settings-desc">按 Esc 时若 <code>Alt</code> 处于按下状态，也强制输出 Esc。</p><p class="settings-case">案例：你按了 <code>Alt</code> 后再按 Esc，依然稳定输出 Esc，不被 Alt 组合干扰。</p></li>
+          <li><code>Always send Escape if Control is pressed</code><p class="settings-desc">按 Esc 时若 <code>Ctrl</code> 按下，也强制输出 Esc。</p><p class="settings-case">案例：终端中手指还压着 Ctrl 时，Esc 仍可正常退出模式。</p></li>
+          <li><code>Always send Escape if GUI is pressed</code><p class="settings-desc">按 Esc 时若 <code>GUI</code> 按下，也强制输出 Esc。</p><p class="settings-case">案例：按着 Win/Command 误触 Esc，依旧只发 Esc。</p></li>
+          <li><code>Always send Escape if Shift is pressed</code><p class="settings-desc">按 Esc 时若 <code>Shift</code> 按下，也强制输出 Esc。</p><p class="settings-case">案例：双手切输入状态时即使压着 Shift，Esc 也不会失效。</p></li>
+        </ul>
+
+        <h3>3. Tap-Hold 与敲击窗口</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Tapping Term</code><p class="settings-desc">Tap/Hold 判定窗口，图中为 <span class="guide-time">200ms</span>。</p><p class="settings-case">案例：双功能键在 <span class="guide-time">200ms</span> 内松开判定为 Tap，超过判定为 Hold。</p></li>
+          <li><code>Permissive Hold</code><p class="settings-desc">在特定连按场景更倾向判定为 Hold。</p><p class="settings-case">案例：你先按住双功能键再快速按别键，开启后更容易触发层/修饰键逻辑。</p></li>
+          <li><code>Hold On Other Key Press</code><p class="settings-desc">只要期间按了其他键，优先判定为 Hold。</p><p class="settings-case">案例：按住双功能键同时敲字母时，稳定触发 Hold，不误出 Tap 字符。</p></li>
+          <li><code>Retro Tapping</code><p class="settings-desc">先按住后直接松开也可能回补为 Tap。</p><p class="settings-case">案例：你轻按略慢，开启后可减少“本想单击却变按住”的误判。</p></li>
+          <li><code>Quick Tap Term</code><p class="settings-desc">快速连击判定时间，图中为 <span class="guide-time">200ms</span>。</p><p class="settings-case">案例：同一键在 <span class="guide-time">200ms</span> 内重复敲击，按快速敲击策略处理。</p></li>
+          <li><code>Tap Code Delay</code><p class="settings-desc">发送 tapcode 间隔，图中为 <span class="guide-time">10ms</span>。</p><p class="settings-case">案例：宏里连续发送按键时加 <span class="guide-time">10ms</span>，可提升部分系统下的识别稳定性。</p></li>
+          <li><code>Tap Hold Caps Delay</code><p class="settings-desc">Tap-Hold 与 Caps 相关延迟，图中为 <span class="guide-time">80ms</span>。</p><p class="settings-case">案例：Caps 参与双功能配置时，设置 <span class="guide-time">80ms</span> 可降低误触。</p></li>
+          <li><code>Tapping Toggle</code><p class="settings-desc">连续敲击达到次数后保持激活，图中为 <code>5</code>。</p><p class="settings-case">案例：连续点同一功能键 5 次后进入保持状态，再点一次退出。</p></li>
+          <li><code>Chordal Hold</code><p class="settings-desc">和弦按法下的 Hold 优化开关。</p><p class="settings-case">案例：双手和弦输入较多时开启，可减少 Tap/Hold 冲突。</p></li>
+          <li><code>Flow Tap</code><p class="settings-desc">连贯输入的 Tap 流控参数，图中为 <code>0</code>。</p><p class="settings-case">案例：设为 <code>0</code> 表示关闭该流控，先用默认行为调试最稳妥。</p></li>
+        </ul>
+
+        <h3>4. Auto Shift</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Enable</code><p class="settings-desc">Auto Shift 总开关。</p><p class="settings-case">案例：开启后，短按输出小写，按住超过阈值可直接输出大写或符号。</p></li>
+          <li><code>Enable for modifiers</code><p class="settings-desc">是否对修饰键相关情形启用 Auto Shift。</p><p class="settings-case">案例：你希望带修饰键组合时也保持 Auto Shift 行为，可开启。</p></li>
+          <li><code>Timeout</code><p class="settings-desc">触发 Auto Shift 的按住阈值，图中为 <span class="guide-time">175ms</span>。</p><p class="settings-case">案例：按住字母超过 <span class="guide-time">175ms</span> 输出大写。</p></li>
+          <li><code>Do not Auto Shift special keys</code><p class="settings-desc">特殊键不参与 Auto Shift。</p><p class="settings-case">案例：功能键或控制键不做长按变体，避免异常输出。</p></li>
+          <li><code>Do not Auto Shift numeric keys</code><p class="settings-desc">数字键不参与 Auto Shift。</p><p class="settings-case">案例：你只希望字母受 Auto Shift 影响，数字始终原样输出。</p></li>
+          <li><code>Do not Auto Shift alpha characters</code><p class="settings-desc">字母不参与 Auto Shift。</p><p class="settings-case">案例：只想对数字/符号做长按变化时开启此项。</p></li>
+          <li><code>Enable keyrepeat</code><p class="settings-desc">允许长按重复发送。</p><p class="settings-case">案例：按住方向键持续移动光标时可用。</p></li>
+          <li><code>Disable keyrepeat when timeout is exceeded</code><p class="settings-desc">超过阈值后禁止重复发送。</p><p class="settings-case">案例：防止长按字母在触发 Auto Shift 后继续刷屏。</p></li>
+        </ul>
+
+        <h3>5. Combo 全局时间</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Time out period for combos</code><p class="settings-desc">Combo 的同时按下窗口，图中为 <span class="guide-time">50ms</span>。</p><p class="settings-case">案例：必须在约 <span class="guide-time">50ms</span> 内一起按下组合键才触发 Combo，否则按普通按键输出。</p></li>
+        </ul>
+
+        <h3>6. One Shot</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Tapping this number of times holds the key until tapped once again</code><p class="settings-desc">达到该连击次数后进入“锁定保持”，图中为 <code>5</code>。</p><p class="settings-case">案例：One Shot Shift 连点 5 次后保持 Shift 状态，再点一次解除。</p></li>
+          <li><code>Time (in ms) before the one shot key is released</code><p class="settings-desc">One Shot 自动释放时间，图中为 <span class="guide-time">5000ms</span>。</p><p class="settings-case">案例：触发 One Shot 后若 <span class="guide-time">5000ms</span> 内无后续按键则自动失效。</p></li>
+        </ul>
+
+        <h3>7. Mouse Keys（鼠标键）</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Delay between pressing a movement key and cursor movement</code><p class="settings-desc">按下移动键到光标开始动的延迟，图中为 <span class="guide-time">10ms</span>。</p><p class="settings-case">案例：设为 <span class="guide-time">10ms</span> 后光标几乎立即开始移动。</p></li>
+          <li><code>Time between cursor movements in milliseconds</code><p class="settings-desc">两次光标位移间隔，图中为 <span class="guide-time">20ms</span>。</p><p class="settings-case">案例：值越小，移动更新越频繁，手感更连贯。</p></li>
+          <li><code>Step size</code><p class="settings-desc">每次移动步长，图中为 <code>8</code>。</p><p class="settings-case">案例：从 8 提到 12，单步位移更大，适合高分辨率屏幕。</p></li>
+          <li><code>Maximum cursor speed at which acceleration stops</code><p class="settings-desc">加速停止前的最大光标速度，图中为 <code>10</code>。</p><p class="settings-case">案例：设为 10 可避免长按后速度无限变快难以控制。</p></li>
+          <li><code>Time until maximum cursor speed is reached</code><p class="settings-desc">达到最大光标速度所需时间，图中为 <span class="guide-time">30ms</span>。</p><p class="settings-case">案例：设短一些可更快冲到高速，适合大范围移动。</p></li>
+          <li><code>Delay between pressing a wheel key and wheel movement</code><p class="settings-desc">滚轮键按下到滚动开始延迟，图中为 <span class="guide-time">10ms</span>。</p><p class="settings-case">案例：设为 <span class="guide-time">10ms</span> 后滚动响应更快。</p></li>
+          <li><code>Time between wheel movements</code><p class="settings-desc">连续滚动间隔，图中为 <span class="guide-time">80ms</span>。</p><p class="settings-case">案例：把 80 降到 50 会滚得更密集更快。</p></li>
+          <li><code>Maximum number of scroll steps per scroll action</code><p class="settings-desc">单次滚动最大步数，图中为 <code>8</code>。</p><p class="settings-case">案例：增大后长按滚轮键时滚动量更大。</p></li>
+          <li><code>Time until maximum scroll speed is reached</code><p class="settings-desc">滚动加速到最高速所需时间，图中为 <span class="guide-time">40ms</span>。</p><p class="settings-case">案例：设更小会更快进入高速滚动，浏览长文更省力。</p></li>
+        </ul>
+
+        <p class="guide-note">
+          操作收尾：所有参数改完后，点击 <code>Save</code> 才会保存到键盘；如果你想放弃本次改动并回到修改前状态，点击 <code>Reset</code>。
+        </p>
+
+        <h2 id="faq">常见问题</h2>
+        <ul class="guide-checklist">
+          <li>看不到某个功能页：检查固件是否开启该功能并重新刷写。</li>
+          <li>改键后没生效：确认当前层（Layer）是否正确，目标键是否在该层被覆盖。</li>
+          <li>Tap Dance 误触：适当提高 <code>Tapping term</code> 并减少重叠功能。</li>
+          <li>Combo 易冲突：缩短 Combo 时间窗口，或更换触发按键组合。</li>
+          <li>建议在每次大改前先备份，出问题可快速回滚。</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 ZOROKB Documentation
+  </footer>
+
+  <script src="../../assets/scripts/index.js"></script>
+</body>
+</html>

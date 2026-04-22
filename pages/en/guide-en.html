@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vial Remapping Guide - ZOROKB</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="../../index-en.html">ZOROKB</a>
+      <div class="nav-links">
+        <a href="../../index-en.html">Home</a>
+        <div class="nav-item">
+          <a class="nav-dropdown-toggle" href="../../keyboard/en/keyboard-en.html">Keyboard</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-group">
+              <p class="nav-dropdown-label">Delivered</p>
+              <a href="../../keyboard/en/tumblor40-en.html">Tumblor40</a>
+              <a href="../../keyboard/en/orbit65-en.html">Orbit65</a>
+            </div>
+            <div class="nav-dropdown-group">
+              <p class="nav-dropdown-label">Group Buy</p>
+              <a href="../../keyboard/en/aurora-alice-ec-en.html">Aurora Alice EC</a>
+              <a href="../../keyboard/en/drift-pad-en.html">Drift Pad</a>
+            </div>
+          </div>
+        </div>
+        <a href="guide-en.html">Vial Guide</a>
+        <a href="docs-en.html">Manual</a>
+        <a href="features-en.html">Features</a>
+        <a class="firmware-link" href="firmware-en.html">Firmware</a>
+      </div>
+      <div class="nav-actions">
+        <form id="search-form" class="search-form" action="search-en.html" method="get" role="search">
+          <input type="search" name="q" placeholder="Search docs..." aria-label="Search">
+        </form>
+        <div class="nav-controls">
+          <a class="nav-control" data-lang-switch href="../zh/guide.html">中文</a>
+          <button class="nav-control" data-theme-toggle type="button">Night</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container guide-main">
+    <div class="layout">
+      <aside class="sidebar" aria-label="Vial guide section navigation">
+        <p class="sidebar-title">Quick Navigation</p>
+        <ul>
+          <li><a href="#prepare">Preparation</a></li>
+          <li><a href="#identify">Identify the Board</a></li>
+          <li><a href="#install">Install Vial</a></li>
+          <li><a href="#open">Open Vial</a></li>
+          <li><a href="#keys">Change Keys</a></li>
+          <li><a href="#layout">Change Layout</a></li>
+          <li><a href="#layer-keys">Layer Keys</a></li>
+          <li><a href="#mod-keys">Modifier Keys</a></li>
+          <li><a href="#macro">Macros</a></li>
+          <li><a href="#tap-dance">Tap Dance</a></li>
+          <li><a href="#combo">Combo</a></li>
+          <li><a href="#key-over">Key Override</a></li>
+          <li><a href="#alt-repeat">Alt Repeat</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <h1>Vial Remapping Guide</h1>
+        <p class="guide-lead">
+          This guide focuses on practical daily usage. Follow it in order and you will understand the core Vial workflow: basic remapping, macros, Tap Dance, Combo, Key Override, and Alt Repeat.
+        </p>
+
+        <h2 id="prepare">Preparation</h2>
+        <ol class="guide-steps">
+          <li>Prepare a USB Type-C cable that supports data transfer. Charge-only cables may not work.</li>
+          <li>Export your current layout before making changes so you can roll back if needed.</li>
+          <li>Make sure your firmware has Vial enabled and the keyboard can connect correctly.</li>
+        </ol>
+        <p class="guide-note">
+          Tip: if some tabs such as Combo or Tap Dance do not appear in Vial, the firmware likely does not enable them.
+        </p>
+
+        <h2 id="identify">Identify the Board</h2>
+        <p>Connect the keyboard with a Type-C data cable and check that the operating system detects the device.</p>
+        <p class="guide-example">
+          Example: if Device Manager shows something like <code>ZOROKB Keyboard</code>, the hardware connection is working.
+        </p>
+
+        <h2 id="install">Install Vial</h2>
+        <p class="vial-install">
+          <a href="https://get.vial.today/download/" target="_blank" class="btn btn-primary">
+            Download Vial
+          </a>
+          <span>
+            or connect through the
+            <a href="https://vial.rocks/" target="_blank" class="vial-link">
+              Vial web app
+            </a>
+          </span>
+        </p>
+        <p class="guide-example">
+          Example: if you do not have install permissions on a work machine, use the web app to connect and edit keys.
+        </p>
+
+        <h2 id="open">Open Vial</h2>
+        <ol class="guide-steps">
+          <li>After opening Vial, look at the top-left corner. If your keyboard name appears, the connection is successful.</li>
+          <li>Open the <code>Keymap</code> page and confirm you can select a key on the layout.</li>
+          <li>Use <code>File</code> → <code>Load saved layout...</code> to import a layout file when needed.</li>
+          <li>If another user shared a JSON layout, you can also use <code>Sideload VIA JSON...</code>.</li>
+          <li>After importing, test your important keys, layer keys, and connection mode keys.</li>
+        </ol>
+        <p class="guide-example">
+          Example: once the top-left area shows <code>zorokb Tumblor40</code>, you can load a shared layout and then make your own adjustments.
+        </p>
+
+        <h2 id="keys">Change Keys</h2>
+        <ol class="guide-steps">
+          <li>Open the <code>Keymap</code> page and click the key you want to change.</li>
+          <li>Select the target keycode from the area below, such as letters, function keys, or media keys.</li>
+          <li>The change takes effect immediately. Press the physical key to confirm the result.</li>
+        </ol>
+        <p class="guide-example">
+          Example: remap <code>Caps Lock</code> to <code>Esc</code>. After saving, pressing Caps outputs Esc.
+        </p>
+
+        <h2 id="layout">Change Layout</h2>
+        <ol class="guide-steps">
+          <li>Open the <code>Layout</code> page and enable the options that match your actual physical layout.</li>
+          <li>Return to <code>Keymap</code> and confirm the visual layout matches the board.</li>
+          <li>If the layout changes significantly, re-check important keys on every layer.</li>
+        </ol>
+        <p class="guide-example">
+          Example: if your board has split space, enable it on the layout page and then assign separate functions to both space keys.
+        </p>
+
+        <h2 id="layer-keys">Layer Page Key Types</h2>
+        <p class="guide-note">
+          <code>n</code> means layer number, usually from <code>0</code> to <code>11</code>. For example, <code>MO(1)</code> targets layer 1.
+        </p>
+        <ul class="guide-checklist settings-list">
+          <li><code>MO(n)</code><p class="settings-desc">Momentarily enter layer <code>n</code> while the key is held.</p><p class="settings-case">Example: <code>MO(1)</code> is commonly used as an Fn key.</p></li>
+          <li><code>DF(n) / PDF(n)</code><p class="settings-desc">Set the default layer. <code>PDF</code> persists after reboot.</p><p class="settings-case">Example: assign <code>PDF(1)</code> to switch the board to layer 1 permanently.</p></li>
+          <li><code>TG(n)</code><p class="settings-desc">Toggle layer <code>n</code> on and off.</p><p class="settings-case">Example: <code>TG(2)</code> is useful for a temporary number layer.</p></li>
+          <li><code>TT(n)</code><p class="settings-desc">Tap to toggle after a threshold, hold to use momentarily.</p><p class="settings-case">Example: long-hold as Fn, repeated taps to lock the layer.</p></li>
+          <li><code>OSL(n)</code><p class="settings-desc">One-shot layer. The next key uses that layer once.</p><p class="settings-case">Example: press <code>OSL(1)</code>, then a symbol key, and the keyboard returns automatically.</p></li>
+          <li><code>TO(n)</code><p class="settings-desc">Jump directly to layer <code>n</code> and leave temporary layer states.</p><p class="settings-case">Example: use <code>TO(0)</code> as a one-key “return to base layer”.</p></li>
+          <li><code>LT n (kc)</code><p class="settings-desc">Tap for <code>kc</code>, hold for layer <code>n</code>.</p><p class="settings-case">Example: <code>LT 1 (Space)</code> sends Space on tap and enters layer 1 on hold.</p></li>
+        </ul>
+        <p class="guide-example">
+          A good beginner path is <code>MO(n)</code> plus <code>TO(0)</code>, then later moving to <code>LT n (kc)</code>.
+        </p>
+
+        <h2 id="mod-keys">Modifier Page Key Types</h2>
+        <p class="guide-note">
+          Common abbreviations: <code>C = Ctrl</code>, <code>S = Shift</code>, <code>A = Alt</code>, <code>G = GUI</code>.
+        </p>
+        <ul class="guide-checklist settings-list">
+          <li><code>OSM ...</code><p class="settings-desc">One Shot Mod. It only affects the next key press.</p><p class="settings-case">Example: <code>OSM LSft</code> then <code>a</code> outputs a single uppercase <code>A</code>.</p></li>
+          <li><code>LSft(kc) / LCtl(kc) / LAlt(kc) / LGui(kc)</code><p class="settings-desc">Send a modifier plus a normal key.</p><p class="settings-case">Example: use a shortcut key for <code>Ctrl+C</code>.</p></li>
+          <li><code>Meh(kc) / Hyper(kc)</code><p class="settings-desc"><code>Meh</code> usually means Ctrl+Shift+Alt, and <code>Hyper</code> adds GUI as well.</p><p class="settings-case">Example: Hyper shortcuts are useful for global automation without conflicts.</p></li>
+          <li><code>LSft_T(kc) / LCtl_T(kc)</code><p class="settings-desc">Mod-Tap. Tap sends <code>kc</code>, hold acts as the modifier.</p><p class="settings-case">Example: <code>LCtl_T(Esc)</code> taps Esc, holds Ctrl.</p></li>
+          <li><code>Meh_T(kc) / ALL_T(kc)</code><p class="settings-desc">Tap for a normal key, hold for a combined modifier.</p><p class="settings-case">Example: <code>Meh_T(Tab)</code> taps Tab and holds Meh.</p></li>
+        </ul>
+        <p class="guide-example">
+          A practical starting point is <code>OSM</code> and simple Mod-Tap keys before using heavy combined modifiers.
+        </p>
+
+        <h2 id="macro">Set Up Macros</h2>
+        <ol class="guide-steps">
+          <li>Open the <code>Macros</code> page and choose a slot such as <code>M0*</code>.</li>
+          <li>Add actions in order: <code>Text</code>, <code>Down</code>, <code>Up</code>, <code>Delay (ms)</code>, <code>Tap</code>.</li>
+          <li>Fill the text field with <code>zorokb</code>.</li>
+          <li>Set <code>Down</code> to <code>A</code> and <code>Up</code> to <code>A</code>.</li>
+          <li>Set the delay to <code>200</code>.</li>
+          <li>Set <code>Tap</code> to <code>B</code>.</li>
+          <li>Return to <code>Keymap</code>, bind a key to <code>M0</code>, and test it.</li>
+        </ol>
+        <pre><code>M0 action order
+1) Text "zorokb"
+2) Down A
+3) Up A
+4) Delay 200ms
+5) Tap B</code></pre>
+        <p class="guide-example">
+          Example output: <code>zorokbAB</code>, with about <span class="guide-time">200ms</span> between <code>A</code> and <code>B</code>.
+        </p>
+        <p class="guide-note">
+          Avoid long macro delays where possible, and do not store passwords or tokens in macros.
+        </p>
+
+        <h2 id="tap-dance">Set Up Tap Dance</h2>
+        <ol class="guide-steps">
+          <li>Open the <code>Tap Dance</code> page and choose slot <code>0*</code>, which corresponds to <code>TD(0)</code>.</li>
+          <li>Configure four actions: <code>On tap = A</code>, <code>On hold = B</code>, <code>On double tap = C</code>, <code>On tap + hold = D</code>.</li>
+          <li>Set <code>Tapping term (ms)</code> to <span class="guide-time">200ms</span>.</li>
+          <li>Click <code>Save</code>.</li>
+          <li>Return to <code>Keymap</code>, assign <code>TD(0)</code>, and test it.</li>
+        </ol>
+        <pre><code>TD(0) settings
+On tap        -> A
+On hold       -> B
+On double tap -> C
+On tap + hold -> D
+Tapping term  -> 200ms</code></pre>
+        <p class="guide-example">
+          Example behavior: single tap sends <code>A</code>, hold sends <code>B</code>, double tap sends <code>C</code>, tap-hold sends <code>D</code>.
+        </p>
+
+        <h2 id="combo">Set Up Combo</h2>
+        <ol class="guide-steps">
+          <li>Open the <code>Combos</code> page and choose a combo slot.</li>
+          <li>Set <code>Key 1 = Q</code>, <code>Key 2 = W</code>, <code>Key 3 = E</code>, leaving <code>Key 4</code> empty.</li>
+          <li>Set <code>Output key = R</code>.</li>
+          <li>Press the combo keys almost simultaneously to test it.</li>
+        </ol>
+        <pre><code>Combo settings
+Key 1      -> Q
+Key 2      -> W
+Key 3      -> E
+Key 4      -> (empty)
+Output key -> R</code></pre>
+        <p class="guide-example">
+          Example: press <code>Q</code> + <code>W</code> + <code>E</code> together to trigger <code>R</code>. If the time gap is larger than <span class="guide-time">50ms</span>, the keys usually register individually.
+        </p>
+        <p class="guide-note">
+          Start with simple two-key combos before building more complex ones.
+        </p>
+
+        <h2 id="key-over">Set Up Key Override</h2>
+        <p class="guide-note">
+          Key Override replaces one output with another when the trigger key and required modifiers match the rule.
+        </p>
+        <ul class="guide-checklist settings-list">
+          <li><code>Enable</code><p class="settings-desc">Master switch for the current rule.</p></li>
+          <li><code>Enable on layers</code><p class="settings-desc">Choose which layers the rule applies to.</p></li>
+          <li><code>Trigger</code><p class="settings-desc">The key that starts the rule, such as <code>A</code>.</p></li>
+          <li><code>Trigger mods</code><p class="settings-desc">Required modifiers, such as <code>LShift</code>.</p></li>
+          <li><code>Negative mods</code><p class="settings-desc">Modifiers that block the rule when held.</p></li>
+          <li><code>Suppressed mods</code><p class="settings-desc">Modifiers to suppress after the override triggers.</p></li>
+          <li><code>Replacement</code><p class="settings-desc">The output key that replaces the trigger, such as <code>B</code>.</p></li>
+          <li><code>Options</code><p class="settings-desc">Behavior details that control when the rule activates or deactivates.</p></li>
+        </ul>
+        <pre><code>Example setup
+Enable          -> On
+Layer           -> choose the target layer, often Layer 0
+Trigger         -> A
+Trigger mods    -> LShift
+Negative mods   -> none
+Suppressed mods -> none
+Replacement     -> B</code></pre>
+        <p class="guide-example">
+          Example: hold <code>LShift</code> and press <code>A</code>, and the output becomes <code>B</code>. Without the required modifier, <code>A</code> behaves normally.
+        </p>
+
+        <h2 id="alt-repeat">Set Up Alt Repeat Key</h2>
+        <p class="guide-note">
+          Alt Repeat outputs an alternate key based on the previous key that was pressed.
+        </p>
+        <ul class="guide-checklist settings-list">
+          <li><code>Enable</code><p class="settings-desc">Enables or disables this Alt Repeat rule.</p></li>
+          <li><code>Last key</code><p class="settings-desc">The preceding key that must match, such as <code>A</code>.</p></li>
+          <li><code>Alt key</code><p class="settings-desc">The alternative key that gets output, such as <code>B</code>.</p></li>
+          <li><code>Allowed mods</code><p class="settings-desc">Modifiers that are allowed to remain active when this mapping runs.</p></li>
+          <li><code>Options</code><p class="settings-desc">Extra behavior such as default fallback, bidirectional mapping, or modifier handedness matching.</p></li>
+        </ul>
+        <pre><code>Example setup
+Enable       -> On
+Last key     -> A
+Alt key      -> B
+Allowed mods -> LShift</code></pre>
+        <p class="guide-example">
+          Example: if the most recent key was <code>A</code>, pressing the Alt Repeat key outputs <code>B</code>.
+        </p>
+
+        <h2 id="settings">Settings</h2>
+        <p class="guide-note">
+          This section explains the <code>QMK Settings</code> page line by line and includes practical examples. Click <code>Save</code> to persist changes, or <code>Reset</code> to discard unsaved edits.
+        </p>
+
+        <h3>1. Key swaps and basic behavior</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Swap Caps Lock and Left Control</code><p class="settings-desc">Exchange the Caps Lock and left Ctrl positions.</p></li>
+          <li><code>Treat Caps Lock as Control</code><p class="settings-desc">Treat Caps Lock as Ctrl without swapping it with the real Ctrl key.</p></li>
+          <li><code>Swap Left Alt and GUI</code><p class="settings-desc">Swap the left Alt and GUI keys.</p></li>
+          <li><code>Swap Right Alt and GUI</code><p class="settings-desc">Swap the right Alt and GUI keys.</p></li>
+          <li><code>Disable the GUI keys</code><p class="settings-desc">Disable all GUI keys to avoid accidental presses.</p></li>
+          <li><code>Swap ` and Escape</code><p class="settings-desc">Swap the grave key and Escape.</p></li>
+          <li><code>Swap \\ and Backspace</code><p class="settings-desc">Swap backslash and Backspace.</p></li>
+          <li><code>Enable N-key rollover</code><p class="settings-desc">Enable NKRO for more simultaneous key presses.</p></li>
+          <li><code>Swap Left Control and GUI</code><p class="settings-desc">Swap left Ctrl and GUI.</p></li>
+          <li><code>Swap Right Control and GUI</code><p class="settings-desc">Swap right Ctrl and GUI.</p></li>
+        </ul>
+
+        <h3>2. Escape send policy</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Always send Escape if Alt is pressed</code><p class="settings-desc">Escape still outputs Esc even if Alt is being held.</p></li>
+          <li><code>Always send Escape if Control is pressed</code><p class="settings-desc">Escape still outputs Esc even if Ctrl is being held.</p></li>
+          <li><code>Always send Escape if GUI is pressed</code><p class="settings-desc">Escape still outputs Esc even if GUI is being held.</p></li>
+          <li><code>Always send Escape if Shift is pressed</code><p class="settings-desc">Escape still outputs Esc even if Shift is being held.</p></li>
+        </ul>
+
+        <h3>3. Tap-Hold windows</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Tapping Term</code><p class="settings-desc">Tap-vs-hold window, shown as <span class="guide-time">200ms</span> in the screenshot.</p></li>
+          <li><code>Permissive Hold</code><p class="settings-desc">Bias certain multi-key flows toward hold behavior.</p></li>
+          <li><code>Hold On Other Key Press</code><p class="settings-desc">Pressing another key during the window forces hold behavior.</p></li>
+          <li><code>Retro Tapping</code><p class="settings-desc">Allows a slow single tap to fall back to tap when released.</p></li>
+          <li><code>Quick Tap Term</code><p class="settings-desc">Window for rapid repeated taps, shown as <span class="guide-time">200ms</span>.</p></li>
+          <li><code>Tap Code Delay</code><p class="settings-desc">Delay between generated tapcodes, shown as <span class="guide-time">10ms</span>.</p></li>
+          <li><code>Tap Hold Caps Delay</code><p class="settings-desc">Caps-related tap-hold delay, shown as <span class="guide-time">80ms</span>.</p></li>
+          <li><code>Tapping Toggle</code><p class="settings-desc">Number of taps needed to lock a tap-toggle key, shown as <code>5</code>.</p></li>
+          <li><code>Chordal Hold</code><p class="settings-desc">Hold optimization for chord-like usage.</p></li>
+          <li><code>Flow Tap</code><p class="settings-desc">Flow-tap parameter, shown as <code>0</code> in the screenshot.</p></li>
+        </ul>
+
+        <h3>4. Auto Shift</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Enable</code><p class="settings-desc">Master toggle for Auto Shift.</p></li>
+          <li><code>Enable for modifiers</code><p class="settings-desc">Extends Auto Shift logic into modifier-related cases.</p></li>
+          <li><code>Timeout</code><p class="settings-desc">Hold threshold, shown as <span class="guide-time">175ms</span>.</p></li>
+          <li><code>Do not Auto Shift special keys</code><p class="settings-desc">Keeps special keys out of Auto Shift behavior.</p></li>
+          <li><code>Do not Auto Shift numeric keys</code><p class="settings-desc">Keeps number keys unchanged.</p></li>
+          <li><code>Do not Auto Shift alpha characters</code><p class="settings-desc">Disables Auto Shift for letters.</p></li>
+          <li><code>Enable keyrepeat</code><p class="settings-desc">Allows long-hold repeating.</p></li>
+          <li><code>Disable keyrepeat when timeout is exceeded</code><p class="settings-desc">Stops repeated output after the timeout threshold.</p></li>
+        </ul>
+
+        <h3>5. Global combo timing</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Time out period for combos</code><p class="settings-desc">Combo activation window, shown as <span class="guide-time">50ms</span>.</p></li>
+        </ul>
+
+        <h3>6. One Shot</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Tapping this number of times holds the key until tapped once again</code><p class="settings-desc">The lock threshold, shown as <code>5</code>.</p></li>
+          <li><code>Time (in ms) before the one shot key is released</code><p class="settings-desc">Auto-release timeout, shown as <span class="guide-time">5000ms</span>.</p></li>
+        </ul>
+
+        <h3>7. Mouse Keys</h3>
+        <ul class="guide-checklist settings-list">
+          <li><code>Delay between pressing a movement key and cursor movement</code><p class="settings-desc">Start delay, shown as <span class="guide-time">10ms</span>.</p></li>
+          <li><code>Time between cursor movements in milliseconds</code><p class="settings-desc">Movement interval, shown as <span class="guide-time">20ms</span>.</p></li>
+          <li><code>Step size</code><p class="settings-desc">Cursor movement step size, shown as <code>8</code>.</p></li>
+          <li><code>Maximum cursor speed at which acceleration stops</code><p class="settings-desc">Maximum pointer speed, shown as <code>10</code>.</p></li>
+          <li><code>Time until maximum cursor speed is reached</code><p class="settings-desc">Time to maximum pointer speed, shown as <span class="guide-time">30ms</span>.</p></li>
+          <li><code>Delay between pressing a wheel key and wheel movement</code><p class="settings-desc">Wheel start delay, shown as <span class="guide-time">10ms</span>.</p></li>
+          <li><code>Time between wheel movements</code><p class="settings-desc">Wheel interval, shown as <span class="guide-time">80ms</span>.</p></li>
+          <li><code>Maximum number of scroll steps per scroll action</code><p class="settings-desc">Maximum wheel steps, shown as <code>8</code>.</p></li>
+          <li><code>Time until maximum scroll speed is reached</code><p class="settings-desc">Time to reach max wheel speed, shown as <span class="guide-time">40ms</span>.</p></li>
+        </ul>
+
+        <p class="guide-note">
+          Final step: after editing any values, click <code>Save</code> to write them to the keyboard. If you want to discard the current unsaved changes, click <code>Reset</code>.
+        </p>
+
+        <h2 id="faq">FAQ</h2>
+        <ul class="guide-checklist">
+          <li>If a function page is missing, check whether the firmware enables that feature and reflash if needed.</li>
+          <li>If a remap does not work, verify the current layer and whether another layer overrides the target key.</li>
+          <li>If Tap Dance misfires, increase <code>Tapping term</code> and reduce overlapping behaviors.</li>
+          <li>If combos conflict too often, shorten the combo window or change the triggering keys.</li>
+          <li>Back up your layout before major edits so you can recover quickly.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 ZOROKB Documentation
+  </footer>
+
+  <script src="../../assets/scripts/index.js"></script>
+</body>
+</html>
