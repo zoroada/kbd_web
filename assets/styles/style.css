@@ -1362,6 +1362,10 @@ main > p {
   margin-top: 18px;
 }
 
+.firmware-note {
+  margin-top: 18px;
+}
+
 .firmware-release-button:hover {
   transform: translateY(-2px);
   box-shadow:
