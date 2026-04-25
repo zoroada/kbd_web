@@ -27,11 +27,6 @@ kbd-web/
 ```bash
 # 生成搜索索引（需要 Python3）
 python3 scripts/build_index.py
-cd /Users/zoroada/Desktop/kbd_web
-python3 scripts/build_index.py
-git add .
-git commit -m "Update website"
-git push
 # 或使用 Makefile
 make build-index
 make build
