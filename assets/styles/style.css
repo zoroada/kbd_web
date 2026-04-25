@@ -1364,6 +1364,29 @@ main > p {
 
 .firmware-note {
   margin-top: 18px;
+  border-color: rgba(214, 76, 76, 0.24);
+  background: rgba(255, 239, 239, 0.92);
+  color: #b42318;
+}
+
+.firmware-note code {
+  color: #c2410c !important;
+  -webkit-text-fill-color: #c2410c;
+  border-color: rgba(214, 76, 76, 0.2);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+:root[data-theme="dark"] .firmware-note {
+  background: rgba(92, 29, 29, 0.42);
+  border-color: rgba(248, 113, 113, 0.28);
+  color: #fecaca;
+}
+
+:root[data-theme="dark"] .firmware-note code {
+  color: #fecaca !important;
+  -webkit-text-fill-color: #fecaca;
+  border-color: rgba(248, 113, 113, 0.22);
+  background: rgba(68, 24, 24, 0.82);
 }
 
 .firmware-release-button:hover {
