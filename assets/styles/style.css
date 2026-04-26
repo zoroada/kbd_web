@@ -1340,6 +1340,13 @@ main > p {
   color: var(--muted);
 }
 
+.firmware-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
 .firmware-release-button {
   display: inline-flex;
   align-items: center;
@@ -1356,10 +1363,6 @@ main > p {
     transform 0.2s ease,
     box-shadow 0.2s ease,
     border-color 0.2s ease;
-}
-
-.firmware-release-button {
-  margin-top: 18px;
 }
 
 .firmware-note {
